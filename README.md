@@ -55,12 +55,13 @@
           1. Close and reopen the windows terminal
           1. Open the distrobution using the dropdown - should open with user defined in the wsl.conf file
 
-## Setup a Scala distribution (use directions link in the resources section)
+## Setup a Scala distribution ([directions link](https://www.youtube.com/watch?v=o9H2EQO3fVs&list=PLZ9n2Pz060AZ5YpfXHUBzFWdVp0WFIN-M&index=2))
 1. Uising the windows terminal:
     1. Open the target distribution using the dropdown
     1. Or - run: `wsl -d <distro name>`
 1. Go to the Coursier site to find [installation instructions](https://get-coursier.io/docs/cli-installation):
 1. In the distrobution, run the following:
+
     ```bash
     # install gzip if not found (`$ which gzip`)
     $ sudo apt update && sudo apt full-upgrade -y
@@ -95,6 +96,9 @@
     $ sbt test
     $ code .
     ```
+
 1. In VS Code, install the metals extension
 1. Look at the VS Code notifications, should see one for importing the build - do that.
+1. Can use metals to create new app by selecting from list of templates - just hit the 'New Scala Project' button (don't forget to look in the VS Code notifications for an option to import the build)
+1. See end of youtube video for how to use the extension 'Scaladex' to generate code for importing packages into the 'build.sbt' file.
 
