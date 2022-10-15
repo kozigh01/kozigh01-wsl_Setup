@@ -100,5 +100,5 @@
 1. In VS Code, install the metals extension
 1. Look at the VS Code notifications, should see one for importing the build - do that.
 1. Can use metals to create new app by selecting from list of templates - just hit the 'New Scala Project' button (don't forget to look in the VS Code notifications for an option to import the build)
-1. See end of youtube video for how to use the extension 'Scaladex' to generate code for importing packages into the 'build.sbt' file.
+1. See end of youtube video for how to use the extension 'Scaladex' to generate code for importing dependencies into the 'build.sbt' file.
 
