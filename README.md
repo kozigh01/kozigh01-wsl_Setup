@@ -34,23 +34,67 @@
     ```
 
 1. Import custom named distribution
-    1. Create a folder for the custom distro - for example C:\WSL2\my-distro
-    1. Run the wsl import command:
-        ```bash
-        $ wsl --import my-distro "C:\WSL2\" "C:\WSL2\my-distro\Ubuntu_20.04_test.tar"
-        $ wsl -l -v
-        ```
+  1. Create a folder for the custom distro - for example C:\WSL2\my-distro
+  1. Run the wsl import command:
+      ```bash
+      $ wsl --import my-distro "C:\WSL2\" "C:\WSL2\my-distro\Ubuntu_20.04_test.tar"
+      $ wsl -l -v
+      ```
       1. open the new distrobution from the windows terminal by selecting from the dropdown- may need to close and re-open the terminal
       1. If the distribution opens as the root user:
-          1. Create a /etc/wsl.conf file in the distribution, with following contents:
-              ```
-              [user]
-              default=<username>
-              ```
-          1. Terminate and restart the distrobution (in a windows terminal - powershell):
-              ```
-              $ wsl --terminate my-distro
-              $ wsl -l -v
-              ```
+        1. Create a /etc/wsl.conf file in the distribution, with following contents:
+            ```
+            [user]
+            default=<username>
+            ```
+        1. Terminate and restart the distrobution (in a windows terminal - powershell):
+            ```
+            $ wsl --terminate my-distro
+            $ wsl -l -v
+            ```
           1. Close and reopen the windows terminal
           1. Open the distrobution using the dropdown - should open with user defined in the wsl.conf file
+
+## Setup a Scala distribution (use directions link in the resources section)
+1. Uising the windows terminal:
+    1. Open the target distribution using the dropdown
+    1. Or - run: `wsl -d <distro name>`
+1. Go to the Coursier site to find [installation instructions](https://get-coursier.io/docs/cli-installation):
+1. In the distrobution, run the following:
+    ```bash
+    # install gzip if not found (`$ which gzip`)
+    $ sudo apt update && sudo apt full-upgrade -y
+    $ sudo apt install gzip
+
+    # install Coursier
+    $ curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
+    $ chmod +x cs
+    $ ./cs setup
+
+    ## follow the prompts to: install java, update ~/.profile, update path
+    ##   then close and reopen the distrobution, and check apps installed
+    $ cs --version
+    $ java -version
+
+    # can now remove the original downloaded cs launcher:
+    $ which cs
+    $ rm -rf ./cs
+    
+    # additional tools that can be installed using Coursiers:
+    $ cs list
+    $ cs install giter8
+
+    # use gliter8 to create a scala-seed project
+    $ mkdir scala && cd scala
+    $ g8 devinsideyou/scala-seed
+    # Answer prompts, for example:
+    #   name: scala-project01
+    #   organization: com.mkozi
+    #   package:
+    $ cd scala-project01/
+    $ sbt test
+    $ code .
+    ```
+1. In VS Code, install the metals extension
+1. Look at the VS Code notifications, should see one for importing the build - do that.
+
