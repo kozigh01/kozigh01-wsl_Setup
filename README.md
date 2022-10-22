@@ -5,6 +5,7 @@
     * [Export and import any Linux distribution in Windows Subsystem for Linux (WSL)](https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/)
     * [https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/](https://superuser.com/questions/1566022/how-to-set-default-user-for-manually-installed-wsl-distro/1627461#1627461)
 * Scala:
+    * [Coursier](https://get-coursier.io/)   
     * https://github.com/kozigh01/wsl_Setup/edit/main/README.md
     * Scala setup: [Single command #Scala Environment Setup via #Coursier](https://www.youtube.com/watch?v=o9H2EQO3fVs&list=PLZ9n2Pz060AZ5YpfXHUBzFWdVp0WFIN-M&index=2)
 
