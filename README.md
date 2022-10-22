@@ -1,10 +1,12 @@
 # Setup up new WSL Distribution
 
 ## Resources:
-* [Export and import any Linux distribution in Windows Subsystem for Linux (WSL)](https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/)
-* [https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/](https://superuser.com/questions/1566022/how-to-set-default-user-for-manually-installed-wsl-distro/1627461#1627461)
-* Additonal setup:
-  * Scala setup: [Single command #Scala Environment Setup via #Coursier](https://www.youtube.com/watch?v=o9H2EQO3fVs&list=PLZ9n2Pz060AZ5YpfXHUBzFWdVp0WFIN-M&index=2)
+* WSL:
+ * [Export and import any Linux distribution in Windows Subsystem for Linux (WSL)](https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/)
+ * [https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/](https://superuser.com/questions/1566022/how-to-set-default-user-for-manually-installed-wsl-distro/1627461#1627461)
+* Scala:
+ * https://github.com/kozigh01/wsl_Setup/edit/main/README.md
+ * Scala setup: [Single command #Scala Environment Setup via #Coursier](https://www.youtube.com/watch?v=o9H2EQO3fVs&list=PLZ9n2Pz060AZ5YpfXHUBzFWdVp0WFIN-M&index=2)
 
 ## Setup with custom distribution name
 1. Install a distribution from the Micrsoft store
@@ -61,7 +63,6 @@
     1. Or - run: `wsl -d <distro name>`
 1. Go to the Coursier site to find [installation instructions](https://get-coursier.io/docs/cli-installation):
 1. In the distrobution, run the following:
-
     ```bash
     # install gzip if not found (`$ which gzip`)
     $ sudo apt update && sudo apt full-upgrade -y
@@ -76,6 +77,8 @@
     ##   then close and reopen the distrobution, and check apps installed
     $ cs --version
     $ java -version
+    
+    ## I
 
     # can now remove the original downloaded cs launcher:
     $ which cs
