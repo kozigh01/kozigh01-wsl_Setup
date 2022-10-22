@@ -4,7 +4,7 @@
 * WSL:
     * [Export and import any Linux distribution in Windows Subsystem for Linux (WSL)](https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/)
     * [https://4sysops.com/archives/export-and-import-any-linux-distribution-in-windows-subsystem-for-linux-wsl/](https://superuser.com/questions/1566022/how-to-set-default-user-for-manually-installed-wsl-distro/1627461#1627461)
-* [Scala](https://www.scala-lang.org/)j
+* [Scala](https://www.scala-lang.org/)
   * [Install Scala](https://www.scala-lang.org/download/)
   * Install specific release: [releases](https://www.scala-lang.org/download/all.html)
   * https://github.com/kozigh01/wsl_Setup/edit/main/README.md
