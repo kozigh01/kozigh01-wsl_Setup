@@ -78,6 +78,7 @@
 
     ## follow the prompts to: install java, update ~/.profile, update path
     ##   then close and reopen the distrobution, and check apps installed
+    $ scala -version
     $ cs --version
     $ java -version
     
